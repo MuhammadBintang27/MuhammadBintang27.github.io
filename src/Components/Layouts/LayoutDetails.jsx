@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "./Footer";
 import StarsCanvas from "../Elements/StarBackground";
 
-const LayoutWeb = ({ children, bgColor = "bg-[#1B2B65]", isDark = true }) => {
+const LayoutDetails = ({ children, bgColor = "bg-[#1B2B65]", isDark = true }) => {
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add("dark");
@@ -39,7 +39,6 @@ const LayoutWeb = ({ children, bgColor = "bg-[#1B2B65]", isDark = true }) => {
 
       {/* Konten Utama */}
       <div className="relative z-10 min-h-screen flex flex-col">
-        <Navbar />
         <div className="flex-grow">{children}</div> {/* Konten utama */}
         <Footer />
       </div>
@@ -47,4 +46,4 @@ const LayoutWeb = ({ children, bgColor = "bg-[#1B2B65]", isDark = true }) => {
   );
 };
 
-export default LayoutWeb;
+export default LayoutDetails;
